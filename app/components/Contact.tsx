@@ -1,11 +1,17 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { Fragment, useRef } from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { portfolioData } from "@/lib/portfolio-data";
 
-/* Simple inline SVG brand icons since lucide removed brand icons */
-function LinkedinIcon({ size = 18, className = "" }: { size?: number; className?: string }) {
+function LinkedinIcon({
+  size = 18,
+  className = "",
+}: {
+  size?: number;
+  className?: string;
+}) {
   return (
     <svg
       width={size}
@@ -25,7 +31,13 @@ function LinkedinIcon({ size = 18, className = "" }: { size?: number; className?
   );
 }
 
-function GithubIcon({ size = 18, className = "" }: { size?: number; className?: string }) {
+function GithubIcon({
+  size = 18,
+  className = "",
+}: {
+  size?: number;
+  className?: string;
+}) {
   return (
     <svg
       width={size}
@@ -44,43 +56,43 @@ function GithubIcon({ size = 18, className = "" }: { size?: number; className?: 
   );
 }
 
-type ContactItem = {
-  icon: React.ComponentType<{ size?: number; className?: string }>;
-  label: string;
-  href: string | null;
-};
-
-const contactItems: ContactItem[] = [
-  {
-    icon: Mail,
-    label: "Ravindu.ponnamperuma@gmail.com",
-    href: "mailto:Ravindu.ponnamperuma@gmail.com",
-  },
-  {
-    icon: Phone,
-    label: "+94 764 247 208",
-    href: "tel:+94764247208",
-  },
-  {
-    icon: MapPin,
-    label: "Elpitiya, Sri Lanka",
-    href: null,
-  },
-  {
-    icon: LinkedinIcon,
-    label: "LinkedIn Profile",
-    href: "https://linkedin.com/in/ravindu-ponnamperuma",
-  },
-  {
-    icon: GithubIcon,
-    label: "GitHub Profile",
-    href: "https://github.com/ravindu-ponnamperuma",
-  },
-];
-
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const { personal } = portfolioData;
+
+  const contactItems = [
+    {
+      id: "email",
+      icon: Mail,
+      label: personal.email,
+      href: `mailto:${personal.email}`,
+    },
+    {
+      id: "phone",
+      icon: Phone,
+      label: personal.phone,
+      href: personal.phoneHref,
+    },
+    {
+      id: "location",
+      icon: MapPin,
+      label: personal.location.full,
+      href: null,
+    },
+    {
+      id: "linkedin",
+      icon: LinkedinIcon,
+      label: personal.social.linkedin.label,
+      href: personal.social.linkedin.url,
+    },
+    {
+      id: "github",
+      icon: GithubIcon,
+      label: personal.social.github.label,
+      href: personal.social.github.url,
+    },
+  ];
 
   return (
     <section
@@ -89,7 +101,6 @@ export default function Contact() {
       className="py-16 sm:py-20 lg:py-24"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -111,7 +122,6 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        {/* Contact Items */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -129,39 +139,38 @@ export default function Contact() {
               </div>
             );
 
-            return item.href ? (
-              <a
-                key={item.label}
-                href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : undefined}
-                rel={
-                  item.href.startsWith("http")
-                    ? "noopener noreferrer"
-                    : undefined
-                }
-                className="bg-navy-light sm:bg-transparent rounded-lg sm:rounded-none border border-gold/10 sm:border-none"
-              >
-                {content}
-              </a>
-            ) : (
-              <div
-                key={item.label}
-                className="bg-navy-light sm:bg-transparent rounded-lg sm:rounded-none border border-gold/10 sm:border-none"
-              >
-                {content}
-              </div>
+            return (
+              <Fragment key={item.id}>
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={
+                      item.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                    className="bg-navy-light sm:bg-transparent rounded-lg sm:rounded-none border border-gold/10 sm:border-none"
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <div className="bg-navy-light sm:bg-transparent rounded-lg sm:rounded-none border border-gold/10 sm:border-none">
+                    {content}
+                  </div>
+                )}
+              </Fragment>
             );
           })}
         </motion.div>
 
-        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <motion.a
-            href="mailto:Ravindu.ponnamperuma@gmail.com"
+            href={`mailto:${personal.email}`}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             className="inline-block w-full sm:w-auto px-8 py-3 bg-gold text-navy font-semibold rounded-lg hover:bg-gold/90 transition-colors text-center text-sm"

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { portfolioData } from "@/lib/portfolio-data";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -40,10 +41,10 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#about"
-            aria-label="Ravindu Damith Ponnamperuma — back to top"
+            aria-label={`${portfolioData.personal.fullName} — back to top`}
             className="text-2xl font-bold text-gold tracking-wider hover:opacity-80 transition-opacity"
           >
-            RD
+            {portfolioData.personal.logoInitials}
           </a>
 
           {/* Desktop Nav Links */}

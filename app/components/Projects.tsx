@@ -6,62 +6,24 @@ import {
   Monitor,
   Server,
   Database,
-  Smartphone,
   Settings,
   Globe,
+  type LucideIcon,
 } from "lucide-react";
+import { portfolioData } from "@/lib/portfolio-data";
 
-const projects = [
-  {
-    icon: Monitor,
-    name: "Factory OS – Production Dashboard",
-    description:
-      "Real-time production monitoring dashboard for garment manufacturing. Displays live machine status, operator performance, shift outputs, and production analytics with WebSocket-powered updates.",
-    tech: ["Angular", "NestJS", "MySQL", "WebSocket", "Docker"],
-  },
-  {
-    icon: Globe,
-    name: "Visitor Management System",
-    description:
-      "End-to-end visitor management platform with visitor pre-registration, QR code check-in, email notifications to approvers, and comprehensive visit history tracking.",
-    tech: ["Angular", "NestJS", "MySQL", "gRPC", "Email"],
-  },
-  {
-    icon: Server,
-    name: "Microservices API Gateway",
-    description:
-      "Centralized API gateway orchestrating multiple microservices including machine, operator, and shift services. Implements authentication, rate limiting, and request routing.",
-    tech: ["NestJS", "Go", "gRPC", "Docker", "Redis"],
-  },
-  {
-    icon: Database,
-    name: "Data Export & Reporting Engine",
-    description:
-      "Automated report generation system supporting PDF and Excel exports. Features server-sent events for real-time progress tracking during large data exports.",
-    tech: ["NestJS", "PDFMake", "ExcelJS", "SSE"],
-  },
-  {
-    icon: Smartphone,
-    name: "Mobile-First Employee Portal",
-    description:
-      "Responsive employee self-service portal for leave requests, attendance tracking, and payslip access. Designed with mobile-first approach for factory floor workers.",
-    tech: ["React", "TypeScript", "REST API", "PWA"],
-  },
-  {
-    icon: Settings,
-    name: "IT Infrastructure Automation",
-    description:
-      "Automated IT infrastructure management tools including network monitoring, backup scheduling, and asset tracking for multi-site factory operations.",
-    tech: ["Python", "Docker", "Linux", "Bash", "Nginx"],
-  },
-];
+const iconMap: Record<(typeof portfolioData.projects)[number]["icon"], LucideIcon> = {
+  monitor: Monitor,
+  server: Server,
+  database: Database,
+  settings: Settings,
+  globe: Globe,
+};
 
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: {
-      staggerChildren: 0.1,
-    },
+    transition: { staggerChildren: 0.1 },
   },
 };
 
@@ -73,6 +35,7 @@ const cardVariants = {
 export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const { projects } = portfolioData;
 
   return (
     <section
@@ -80,8 +43,7 @@ export default function Projects() {
       aria-labelledby="projects-heading"
       className="py-16 sm:py-20 lg:py-24"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
-        {/* Section Header */}
+      <motion.div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -99,7 +61,6 @@ export default function Projects() {
           </h2>
         </motion.div>
 
-        {/* Projects Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -107,7 +68,7 @@ export default function Projects() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
         >
           {projects.map((project) => {
-            const Icon = project.icon;
+            const Icon = iconMap[project.icon];
             return (
               <motion.div
                 key={project.name}
@@ -138,7 +99,7 @@ export default function Projects() {
             );
           })}
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 }

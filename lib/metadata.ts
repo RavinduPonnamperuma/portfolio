@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getSiteUrl, siteConfig } from "./site";
+import { getSiteUrl, siteConfig } from "./portfolio-data";
 
 export function buildMetadata(): Metadata {
   const siteUrl = getSiteUrl();

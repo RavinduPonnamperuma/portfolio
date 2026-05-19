@@ -1,5 +1,7 @@
 "use client";
 
+import { portfolioData } from "@/lib/portfolio-data";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -9,7 +11,9 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-1 text-center">
           <p className="text-xs sm:text-sm text-text-muted">
             © {year} Designed & Built by{" "}
-            <span className="text-gold font-medium">Ravindu Damith</span>
+            <span className="text-gold font-medium">
+              {portfolioData.personal.firstName}
+            </span>
           </p>
           <p className="text-xs sm:text-sm text-text-muted hidden sm:block">
             •

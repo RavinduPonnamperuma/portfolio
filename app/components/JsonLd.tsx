@@ -1,4 +1,4 @@
-import { getSiteUrl, siteConfig } from "@/lib/site";
+import { getSiteUrl, siteConfig } from "@/lib/portfolio-data";
 
 export default function JsonLd() {
   const siteUrl = getSiteUrl();
