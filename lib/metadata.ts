@@ -55,7 +55,7 @@ export function buildMetadata(): Metadata {
     },
     icons: {
       icon: "/favicon.ico",
-      apple: "/images/profile.jpg",
+      apple: "/images/profile.JPG.jpeg",
     },
     other: {
       "geo.region": siteConfig.location.countryCode,

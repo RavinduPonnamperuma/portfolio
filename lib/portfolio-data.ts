@@ -15,7 +15,7 @@ export const portfolioData = {
     email: "Ravindu.ponnamperuma@gmail.com",
     location: {
       full: "Egodakanda, Pituwala North, Elpitiya, Sri Lanka",
-      short: "Elpitiya, Sri Lanka",
+      short: "Maharagama, Sri Lanka",
       locality: "Elpitiya",
       country: "Sri Lanka",
       countryCode: "LK",
@@ -30,7 +30,7 @@ export const portfolioData = {
         url: "https://github.com/RavinduPonnamperuma",
       },
     },
-    profileImage: "/images/profile.jpg",
+    profileImage: "/images/profile.JPG.jpeg",
     logoInitials: "RP",
   },
 
