@@ -27,7 +27,7 @@ export const portfolioData = {
       },
       github: {
         label: "GitHub — Ravindu Ponnamperuma",
-        url: "https://github.com/ravindu-ponnamperuma",
+        url: "https://github.com/RavinduPonnamperuma",
       },
     },
     profileImage: "/images/profile.jpg",
