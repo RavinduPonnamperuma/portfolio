@@ -29,6 +29,7 @@ export default function Hero() {
   return (
     <section
       id="about"
+      aria-labelledby="hero-heading"
       className="min-h-screen flex items-center pt-20 pb-16 sm:pt-24 sm:pb-20"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -51,6 +52,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.h1
+              id="hero-heading"
               variants={fadeUp}
               transition={{ duration: 0.6 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-light mb-3 leading-tight"

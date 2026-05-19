@@ -68,7 +68,11 @@ export default function Education() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="education" className="py-16 sm:py-20 lg:py-24">
+    <section
+      id="education"
+      aria-labelledby="education-heading"
+      className="py-16 sm:py-20 lg:py-24"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         {/* Section Header */}
         <motion.div
@@ -80,7 +84,10 @@ export default function Education() {
           <p className="text-gold text-sm font-medium uppercase tracking-wider mb-2">
             Learning
           </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-light">
+          <h2
+            id="education-heading"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-light"
+          >
             Education & Certifications
           </h2>
         </motion.div>

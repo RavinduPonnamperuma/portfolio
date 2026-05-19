@@ -32,7 +32,11 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="experience" className="py-16 sm:py-20 lg:py-24">
+    <section
+      id="experience"
+      aria-labelledby="experience-heading"
+      className="py-16 sm:py-20 lg:py-24"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         {/* Section Header */}
         <motion.div
@@ -44,7 +48,10 @@ export default function Experience() {
           <p className="text-gold text-sm font-medium uppercase tracking-wider mb-2">
             Career Path
           </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-light">
+          <h2
+            id="experience-heading"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-light"
+          >
             Work Experience
           </h2>
         </motion.div>

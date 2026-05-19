@@ -83,7 +83,11 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="contact" className="py-16 sm:py-20 lg:py-24">
+    <section
+      id="contact"
+      aria-labelledby="contact-heading"
+      className="py-16 sm:py-20 lg:py-24"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         {/* Section Header */}
         <motion.div
@@ -95,7 +99,10 @@ export default function Contact() {
           <p className="text-gold text-sm font-medium uppercase tracking-wider mb-2">
             Let&apos;s Connect
           </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-light">
+          <h2
+            id="contact-heading"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-light"
+          >
             Get In Touch
           </h2>
           <p className="text-sm sm:text-base text-text-muted mt-3 max-w-xl">

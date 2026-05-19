@@ -1,5 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { buildMetadata } from "@/lib/metadata";
+import { siteConfig } from "@/lib/site";
+import JsonLd from "./components/JsonLd";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,27 +11,13 @@ const inter = Inter({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Ravindu Damith Ponnamperuma | IT Coordinator & Software Developer",
-  description:
-    "Portfolio of Ravindu Damith Ponnamperuma — IT Coordinator & Software Developer specializing in Angular, NestJS, TypeScript, and full-stack web development. Based in Sri Lanka.",
-  keywords: [
-    "Ravindu Damith Ponnamperuma",
-    "Software Developer",
-    "IT Coordinator",
-    "Full-Stack Developer",
-    "Angular",
-    "NestJS",
-    "TypeScript",
-    "Sri Lanka",
-  ],
-  authors: [{ name: "Ravindu Damith Ponnamperuma" }],
-  openGraph: {
-    title: "Ravindu Damith Ponnamperuma | Portfolio",
-    description:
-      "IT Coordinator & Software Developer — Angular, NestJS, TypeScript",
-    type: "website",
-  },
+export const metadata: Metadata = buildMetadata();
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0A1628",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -37,8 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} antialiased`} suppressHydrationWarning>
+    <html
+      lang={siteConfig.language}
+      className={`${inter.variable} antialiased`}
+      suppressHydrationWarning
+    >
       <body className="min-h-screen flex flex-col" suppressHydrationWarning>
+        <JsonLd />
         {children}
       </body>
     </html>
