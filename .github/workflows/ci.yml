@@ -1,12 +1,12 @@
 # CI: feature/* → dev → main
-#   PR to dev/main: Build must pass, then Test (lint + typecheck)
+# PR to dev/main: Build must pass, then Test (lint + typecheck)
 
 name: CI
 
 on:
   pull_request:
     branches:
-      - dev
+      - release/dev
       - main
 
 env:
@@ -34,7 +34,7 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build
         run: npm run build
@@ -56,7 +56,7 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Lint
         run: npm run lint
