@@ -8,14 +8,7 @@ on:
     branches:
       - dev
       - main
-      - release
-  push:
-    branches:
-      - dev
-      - main
-      - release
 
-# Use Node 24 for JavaScript-based Actions (checkout, setup-node, etc.)
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   NEXT_TELEMETRY_DISABLED: 1
@@ -41,9 +34,7 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: |
-          npm --version
-          npm ci
+        run: npm ci
 
       - name: Build
         run: npm run build
@@ -67,5 +58,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint & typecheck
-        run: npm run test
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
