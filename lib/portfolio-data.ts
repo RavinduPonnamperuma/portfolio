@@ -30,7 +30,7 @@ export const portfolioData = {
         url: "https://github.com/RavinduPonnamperuma",
       },
     },
-    profileImage: "/images/profile.JPG.jpeg",
+    profileImage: "/images/profile.png",
     logoInitials: "RP",
   },
 
