@@ -4,324 +4,451 @@
  */
 
 export const portfolioData = {
-  personal: {
-    fullName: "Ravindu Ponnamperuma",
-    displayName: "Ravindu Ponnamperuma",
-    firstName: "Ravindu",
-    lastName: "Ponnamperuma",
-    jobTitle: "IT Coordinator & System Support",
-    phone: "+94 764 247 208",
-    phoneHref: "tel:+94764247208",
-    email: "Ravindu.ponnamperuma@gmail.com",
-    location: {
-      full: "Egodakanda, Pituwala North, Elpitiya, Sri Lanka",
-      short: "Maharagama, Sri Lanka",
-      locality: "Elpitiya",
-      country: "Sri Lanka",
-      countryCode: "LK",
+    personal: {
+        fullName: "Ravindu Ponnamperuma",
+        displayName: "Ravindu Ponnamperuma",
+        firstName: "Ravindu",
+        lastName: "Ponnamperuma",
+        jobTitle: "IT Support Engineer",
+        phone: "+94 714 247 208",
+        phoneHref: "tel:+94714247208",
+        email: "Ravindu.ponnamperuma@gmail.com",
+        location: {
+            full: "Egodakanda, Pituwala North, Elpitiya, Sri Lanka",
+            short: "Maharagama, Sri Lanka",
+            locality: "Elpitiya",
+            country: "Sri Lanka",
+            countryCode: "LK",
+        },
+        social: {
+            linkedin: {
+                label: "LinkedIn — Ravindu Ponnamperuma",
+                url: "https://www.linkedin.com/in/ravindu-ponnamperuma-2b3344245/",
+            },
+            github: {
+                label: "GitHub — Ravindu Ponnamperuma",
+                url: "https://github.com/RavinduPonnamperuma",
+            },
+        },
+        profileImage: "/images/profile.png",
+        logoInitials: "RP",
     },
-    social: {
-      linkedin: {
-        label: "LinkedIn — Ravindu Ponnamperuma",
-        url: "https://linkedin.com/in/ravindu-ponnamperuma",
-      },
-      github: {
-        label: "GitHub — Ravindu Ponnamperuma",
-        url: "https://github.com/RavinduPonnamperuma",
-      },
-    },
-    profileImage: "/images/profile.png",
-    logoInitials: "RP",
-  },
 
-  summary:
-    "BIT graduate from the University of Moratuwa, currently awaiting graduation. Working as IT Coordinator at the Sri Lanka Institute of Textile & Apparel (SLITA). Previously worked as IT Support at Pulse Academy (Pvt) and completed one year as a Trainee Software Developer at Maxim Impressions Lanka (Pvt) Ltd. Seeking a challenging and rewarding role to utilize and enhance knowledge, skills, and professional experience.",
+    summary:
+        "BIT graduate from the University of Moratuwa with hands-on experience in IT support, system administration, and enterprise infrastructure. Currently serving as IT Coordinator at the Sri Lanka Institute of Textile & Apparel (SLITA), managing web platforms, ERP/LMS systems, Microsoft 365, and end-user support. Previously delivered IT support and digital media services at Pulse Academy and completed a one-year Trainee Software Developer role at Maxim Impressions Lanka (Pvt) Ltd. Passionate about resolving technical issues efficiently, maintaining reliable IT environments, and supporting end users across diverse platforms.",
 
-  stats: [
-    { value: "3+", label: "Years Experience" },
-    { value: "6+", label: "Projects" },
-    { value: "30+", label: "Technologies" },
-  ],
+    stats: [
+        { value: "3+", label: "Years Experience" },
+        { value: "10+", label: "Systems Supported" },
+        { value: "30+", label: "Technologies" },
+    ],
 
-  experience: [
-    {
-      period: "January 2025 – Present",
-      role: "IT Coordinator",
-      company: "Sri Lanka Institute of Textile and Apparel (SLITA)",
-      description:
-        "Leading IT operations across web platforms, enterprise systems, and digital learning infrastructure.",
-      responsibilities: [
-        "Website administration — slita.lk",
-        "Customer Management System Administration",
-        "ERP System Administration",
-        "Learning Management System administration — lms.slita",
-        "Microsoft 365 Package & Data Management",
-        "IT-related Projects coordination",
-        "Social Media Marketing Implementation & Coordination",
-      ],
-    },
-    {
-      period: "2025 – 2026",
-      role: "IT Support",
-      company: "Pulse Academy of International Health Professionals (Pvt) Ltd.",
-      description:
-        "Provided technical support and digital media services for academy operations.",
-      responsibilities: [
-        "Hardware management",
-        "Software management",
-        "Video Editing",
-        "Videography",
-        "Photography",
-        "Social Media Handling",
-      ],
-    },
-    {
-      period: "2023 – 2024",
-      role: "Trainee Software Developer",
-      company: "Maxim Impressions Lanka (Pvt) Ltd.",
-      description:
-        "One-year traineeship in Enterprise Resource Planning (ERP), successfully completed. Built full-stack systems for visitor and HR management.",
-      responsibilities: [
-        "Visitor Management System",
-        "Human Resource Management System",
-      ],
-      techStack: [
-        "Angular",
-        "TypeScript",
-        "Tailwind SCSS",
-        "NestJS",
-        "MongoDB",
-        "MySQL",
-        "Postman",
-      ],
-    },
-  ],
+    experience: [
+        {
+            period: "January 2025 – Present",
+            role: "IT Coordinator",
+            company: "Sri Lanka Institute of Textile and Apparel (SLITA)",
+            description:
+                "Overseeing day-to-day IT operations, enterprise system administration, and end-user support across the organisation.",
+            responsibilities: [
+                "Website administration and content management — slita.lk",
+                "Customer Management System (CMS) administration and user support",
+                "ERP System administration, configuration, and troubleshooting",
+                "Learning Management System (LMS) administration — lms.slita",
+                "Microsoft 365 administration — user provisioning, licensing, and data management",
+                "Hardware and software troubleshooting and helpdesk support",
+                "IT project coordination and vendor liaison",
+                "Social media marketing implementation and digital content coordination",
+            ],
+        },
+        {
+            period: "2025 – 2026",
+            role: "IT Support Technician",
+            company: "Pulse Academy of International Health Professionals (Pvt) Ltd.",
+            description:
+                "Delivered end-to-end IT support and digital media services to sustain smooth academy operations.",
+            responsibilities: [
+                "Hardware installation, maintenance, and troubleshooting",
+                "Software installation, updates, and license management",
+                "Network connectivity and peripheral device support",
+                "Video editing and post-production",
+                "Videography and photography for academy events",
+                "Social media account management and content scheduling",
+            ],
+        },
+        {
+            period: "2023 – 2024",
+            role: "Trainee Software Developer",
+            company: "Maxim Impressions Lanka (Pvt) Ltd.",
+            description:
+                "Completed a one-year traineeship in Enterprise Resource Planning (ERP), building full-stack internal tools to streamline visitor and HR workflows.",
+            responsibilities: [
+                "Developed and deployed a Visitor Management System for enterprise use",
+                "Built an HR Management System to manage employee records and workflows",
+                "Collaborated with senior developers on requirement gathering and system design",
+                "Performed API testing and debugging using Postman",
+            ],
+            techStack: [
+                "Angular",
+                "TypeScript",
+                "Tailwind SCSS",
+                "NestJS",
+                "MongoDB",
+                "MySQL",
+                "Postman",
+            ],
+        },
+    ],
 
-  skills: [
-    {
-      category: "Languages",
-      technologies: [
-        "HTML",
-        "Java",
-        "C#",
-        "Android",
-        "PHP",
-        "JavaScript",
-        "TypeScript",
-        "AJAX",
-      ],
-      highlights: ["TypeScript", "JavaScript", "Java", "PHP"],
-    },
-    {
-      category: "Frameworks",
-      technologies: ["Angular", "NestJS", "NodeJS", "Flowbite"],
-      highlights: ["Angular", "NestJS", "NodeJS"],
-    },
-    {
-      category: "Styling",
-      technologies: ["Tailwind CSS", "Bootstrap", "SCSS", "CSS"],
-      highlights: ["Tailwind CSS", "SCSS"],
-    },
-    {
-      category: "Databases",
-      technologies: ["MySQL", "MongoDB"],
-      highlights: ["MySQL", "MongoDB"],
-    },
-    {
-      category: "DB & Server Tools",
-      technologies: [
-        "SQL Server Management Studio",
-        "XAMPP",
-        "WAMP",
-      ],
-      highlights: ["SQL Server Management Studio"],
-    },
-    {
-      category: "IDEs",
-      technologies: [
-        "Visual Studio",
-        "NetBeans",
-        "IntelliJ",
-        "Visual Studio Code",
-        "Android Studio",
-        "Sublime Text",
-      ],
-      highlights: ["Visual Studio Code"],
-    },
-    {
-      category: "Operating Systems",
-      technologies: ["Windows", "Linux", "Mac"],
-      highlights: ["Linux"],
-    },
-    {
-      category: "Other Tools",
-      technologies: [
-        "Moodle LMS Admin",
-        "Node",
-        "Git",
-        "Docker",
-        "Postman",
-        "Bitbucket",
-        "Microsoft Office 365",
-      ],
-      highlights: ["Git", "Docker", "Postman"],
-    },
-  ],
+    skills: [
+        {
+            category: "IT Support & Administration",
+            technologies: [
+                "Helpdesk & End-User Support",
+                "Hardware Troubleshooting",
+                "Software Installation & Configuration",
+                "Microsoft 365 Administration",
+                "ERP System Administration",
+                "LMS Administration (Moodle)",
+                "Active Directory Basics",
+                "Network Troubleshooting",
+                "Remote Desktop Support",
+            ],
+            highlights: [
+                "Microsoft 365 Administration",
+                "ERP System Administration",
+                "Helpdesk & End-User Support",
+            ],
+        },
+        {
+            category: "Operating Systems",
+            technologies: ["Windows 10/11", "Windows Server", "Linux", "macOS"],
+            highlights: ["Windows 10/11", "Linux"],
+        },
+        {
+            category: "Networking & Tools",
+            technologies: [
+                "TCP/IP Fundamentals",
+                "LAN/WAN Basics",
+                "XAMPP",
+                "WAMP",
+                "Docker",
+                "Git",
+                "Postman",
+                "Bitbucket",
+            ],
+            highlights: ["Docker", "Git", "Postman"],
+        },
+        {
+            category: "Databases",
+            technologies: [
+                "MySQL",
+                "MongoDB",
+                "SQL Server Management Studio",
+                "PHPMyAdmin",
+            ],
+            highlights: ["MySQL", "SQL Server Management Studio"],
+        },
+        {
+            category: "Programming & Scripting",
+            technologies: [
+                "HTML",
+                "PHP",
+                "JavaScript",
+                "TypeScript",
+                "Java",
+                "C#",
+                "Python (Basics)",
+                "AJAX",
+            ],
+            highlights: ["JavaScript", "TypeScript", "PHP"],
+        },
+        {
+            category: "Frameworks & Platforms",
+            technologies: ["Angular", "NestJS", "NodeJS", "Bootstrap", "Tailwind CSS"],
+            highlights: ["Angular", "NestJS"],
+        },
+        {
+            category: "Productivity & Collaboration",
+            technologies: [
+                "Microsoft 365 (Word, Excel, Outlook, Teams, SharePoint)",
+                "Google Workspace",
+                "Moodle LMS",
+            ],
+            highlights: ["Microsoft 365 (Word, Excel, Outlook, Teams, SharePoint)"],
+        },
+        {
+            category: "IDEs & Dev Tools",
+            technologies: [
+                "Visual Studio Code",
+                "Visual Studio",
+                "NetBeans",
+                "IntelliJ IDEA",
+                "Android Studio",
+                "Sublime Text",
+            ],
+            highlights: ["Visual Studio Code"],
+        },
+    ],
 
-  projects: [
-    {
-      icon: "monitor" as const,
-      name: "IoT-Based Monitoring & Controlling System for Pollytunnel",
-      description:
-        "IoT-enabled monitoring and control platform for polytunnel environments with real-time data visualization.",
-      tech: ["Angular", "NestJS", "TypeScript"],
-    },
-    {
-      icon: "database" as const,
-      name: "Kitchen Stock Management System",
-      description:
-        "Desktop application for tracking kitchen inventory, stock levels, and supply management.",
-      tech: ["C#", "SQL Server Management Studio"],
-    },
-    {
-      icon: "globe" as const,
-      name: "Readify Online Book Store",
-      description:
-        "E-commerce style online book store with catalog browsing and order management features.",
-      tech: ["HTML", "CSS", "Bootstrap", "PHP", "PHPMyAdmin"],
-    },
-    {
-      icon: "server" as const,
-      name: "Angular Routing & TypeORM Database Connect",
-      description:
-        "Full-stack application demonstrating Angular routing patterns with TypeORM database integration.",
-      tech: ["Angular", "NestJS", "TypeScript"],
-    },
-    {
-      icon: "globe" as const,
-      name: "Visitor Management System",
-      description:
-        "Enterprise visitor management system developed during internship at Maxim Impressions Lanka.",
-      tech: [
-        "Angular",
-        "TypeScript",
-        "Tailwind SCSS",
-        "NestJS",
-        "MongoDB",
-        "MySQL",
-      ],
-    },
-    {
-      icon: "settings" as const,
-      name: "Human Resource Management System",
-      description:
-        "HR management platform for employee records and workflows, built during internship training.",
-      tech: [
-        "Angular",
-        "TypeScript",
-        "Tailwind SCSS",
-        "NestJS",
-        "MongoDB",
-        "MySQL",
-      ],
-    },
-  ],
+    /** Synced with https://github.com/RavinduPonnamperuma?tab=repositories */
+    githubRepositoriesUrl:
+        "https://github.com/RavinduPonnamperuma?tab=repositories",
+    featuredProjectCount: 6,
 
-  education: [
-    {
-      type: "degree" as const,
-      title: "Bachelor of Information Technology",
-      institution: "University of Moratuwa",
-      year: "2022 – 2025",
-      description: "Successfully completed, currently awaiting graduation",
-    },
-  ],
+    projects: [
+        {
+            icon: "globe" as const,
+            repo: "portfolio",
+            name: "Portfolio Website",
+            repoUrl: "https://github.com/RavinduPonnamperuma/portfolio",
+            description:
+                "Personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
+            tech: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
+            updatedAt: "2026-05-20",
+        },
+        {
+            icon: "monitor" as const,
+            repo: "greenhouse_UI",
+            name: "Greenhouse IoT UI",
+            repoUrl: "https://github.com/RavinduPonnamperuma/greenhouse_UI",
+            description:
+                "Frontend for an IoT-based monitoring and control system for polytunnel environments with real-time sensor visualisation.",
+            tech: ["TypeScript", "Angular"],
+            updatedAt: "2025-08-28",
+        },
+        {
+            icon: "server" as const,
+            repo: "greenhouse_Api",
+            name: "Greenhouse IoT API",
+            repoUrl: "https://github.com/RavinduPonnamperuma/greenhouse_Api",
+            description:
+                "Backend API for greenhouse IoT sensor data, device control, and remote management.",
+            tech: ["TypeScript", "NestJS", "Node.js"],
+            updatedAt: "2025-10-10",
+        },
+        {
+            icon: "globe" as const,
+            repo: "Readify_Online_Bookstore",
+            name: "Readify Online Bookstore",
+            repoUrl: "https://github.com/RavinduPonnamperuma/Readify_Online_Bookstore",
+            description:
+                "Group project — e-commerce online book store with catalogue, search, and order management.",
+            tech: ["PHP", "HTML", "CSS", "Bootstrap", "MySQL"],
+            updatedAt: "2024-11-04",
+        },
+        {
+            icon: "monitor" as const,
+            repo: "Final_pro_mobile-app",
+            name: "Final Year Mobile App",
+            repoUrl: "https://github.com/RavinduPonnamperuma/Final_pro_mobile-app",
+            description:
+                "Final-year mobile application project with native C++ components.",
+            tech: ["C++", "Mobile"],
+            updatedAt: "2024-10-09",
+        },
+        {
+            icon: "database" as const,
+            repo: "KitchenStock",
+            name: "Kitchen Stock Management",
+            repoUrl: "https://github.com/RavinduPonnamperuma/KitchenStock",
+            description:
+                "Desktop application for tracking kitchen inventory, stock levels, and supply management.",
+            tech: ["C#", "SQL Server"],
+            updatedAt: "2022-08-18",
+        },
+        {
+            icon: "server" as const,
+            repo: "jwt-for-vms",
+            name: "JWT for Visitor Management",
+            repoUrl: "https://github.com/RavinduPonnamperuma/jwt-for-vms",
+            description:
+                "JWT authentication module for the enterprise Visitor Management System built at Maxim Impressions Lanka.",
+            tech: ["TypeScript", "NestJS", "JWT"],
+            updatedAt: "2023-05-30",
+        },
+        {
+            icon: "database" as const,
+            repo: "dbmaxim",
+            name: "Maxim ERP Database",
+            repoUrl: "https://github.com/RavinduPonnamperuma/dbmaxim",
+            description:
+                "Database layer and data models for Maxim Impressions Lanka ERP internship projects.",
+            tech: ["TypeScript", "MySQL", "MongoDB"],
+            updatedAt: "2023-06-09",
+        },
+        {
+            icon: "database" as const,
+            repo: "mongo-db",
+            name: "MongoDB Integration",
+            repoUrl: "https://github.com/RavinduPonnamperuma/mongo-db",
+            description:
+                "MongoDB connectivity and data access patterns for full-stack NestJS applications.",
+            tech: ["TypeScript", "MongoDB", "NestJS"],
+            updatedAt: "2023-06-06",
+        },
+        {
+            icon: "server" as const,
+            repo: "type-orm_db-connect",
+            name: "TypeORM Database Integration",
+            repoUrl: "https://github.com/RavinduPonnamperuma/type-orm_db-connect",
+            description:
+                "Demo application showcasing TypeORM database connectivity with NestJS and Angular.",
+            tech: ["TypeScript", "TypeORM", "NestJS", "Angular"],
+            updatedAt: "2023-06-02",
+        },
+        {
+            icon: "globe" as const,
+            repo: "routing-app",
+            name: "Angular Routing App",
+            repoUrl: "https://github.com/RavinduPonnamperuma/routing-app",
+            description:
+                "Angular application demonstrating client-side routing patterns and navigation structure.",
+            tech: ["HTML", "Angular", "TypeScript"],
+            updatedAt: "2023-05-10",
+        },
+        {
+            icon: "globe" as const,
+            repo: "login-register",
+            name: "Login & Register App",
+            repoUrl: "https://github.com/RavinduPonnamperuma/login-register",
+            description:
+                "Web application with user login, registration, and session handling.",
+            tech: ["HTML", "CSS", "JavaScript"],
+            updatedAt: "2023-08-11",
+        },
+        {
+            icon: "monitor" as const,
+            repo: "test_2",
+            name: "TypeScript Practice Project",
+            repoUrl: "https://github.com/RavinduPonnamperuma/test_2",
+            description:
+                "Practice project for exploring TypeScript language features and tooling.",
+            tech: ["TypeScript"],
+            updatedAt: "2023-05-18",
+        },
+        {
+            icon: "globe" as const,
+            repo: "test_one_1",
+            name: "Web Practice Project",
+            repoUrl: "https://github.com/RavinduPonnamperuma/test_one_1",
+            description:
+                "Early web development practice project for HTML structure and styling.",
+            tech: ["HTML", "CSS"],
+            updatedAt: "2023-05-09",
+        },
+        {
+            icon: "settings" as const,
+            repo: "RavinduPonnamperuma",
+            name: "GitHub Profile Config",
+            repoUrl: "https://github.com/RavinduPonnamperuma/RavinduPonnamperuma",
+            description:
+                "Config files for my GitHub profile README and special repository.",
+            tech: ["GitHub", "Markdown"],
+            updatedAt: "2021-09-09",
+        },
+    ],
 
-  certificates: [
-    {
-      type: "cert" as const,
-      title: "Front-end Web Development",
-      institution: "University of Moratuwa — Open Learning Platform",
-      year: "2023",
-      description: "Open Learning Platform certification",
-    },
-    {
-      type: "cert" as const,
-      title: "Web Design for Beginners",
-      institution: "University of Moratuwa — Open Learning Platform",
-      year: "2023",
-      description: "Open Learning Platform certification",
-    },
-    {
-      type: "cert" as const,
-      title: "Foundation of Project Management",
-      institution: "University of Moratuwa — Open Learning Platform",
-      year: "2023",
-      description: "Open Learning Platform certification",
-    },
-    {
-      type: "cert" as const,
-      title: "Python for Beginners",
-      institution: "University of Moratuwa — Open Learning Platform",
-      year: "2023",
-      description: "Open Learning Platform certification",
-    },
-    {
-      type: "cert" as const,
-      title: "Certificate Course in English Language",
-      institution: "British Way English Academy, Galle",
-      year: "2018",
-      description: "English language proficiency certification",
-    },
-  ],
+    education: [
+        {
+            type: "degree" as const,
+            title: "Bachelor of Information Technology (BIT)",
+            institution: "University of Moratuwa",
+            year: "2022 – 2025",
+            description: "Successfully completed, currently awaiting graduation",
+        },
+    ],
+
+    certificates: [
+        {
+            type: "cert" as const,
+            title: "Front-end Web Development",
+            institution: "University of Moratuwa — Open Learning Platform",
+            year: "2023",
+            description: "Open Learning Platform certification",
+        },
+        {
+            type: "cert" as const,
+            title: "Web Design for Beginners",
+            institution: "University of Moratuwa — Open Learning Platform",
+            year: "2023",
+            description: "Open Learning Platform certification",
+        },
+        {
+            type: "cert" as const,
+            title: "Foundation of Project Management",
+            institution: "University of Moratuwa — Open Learning Platform",
+            year: "2023",
+            description: "Open Learning Platform certification",
+        },
+        {
+            type: "cert" as const,
+            title: "Python for Beginners",
+            institution: "University of Moratuwa — Open Learning Platform",
+            year: "2023",
+            description: "Open Learning Platform certification",
+        },
+        {
+            type: "cert" as const,
+            title: "Certificate Course in English Language",
+            institution: "British Way English Academy, Galle",
+            year: "2018",
+            description: "English language proficiency certification",
+        },
+    ],
 } as const;
 
 /** Flat list of all skills for SEO / JSON-LD */
 export function getAllSkills(): string[] {
-  return portfolioData.skills.flatMap((cat) => cat.technologies);
+    return portfolioData.skills.flatMap((cat) => cat.technologies);
 }
 
 /** SEO-specific config derived from portfolio data */
 export const siteConfig = {
-  name: portfolioData.personal.fullName,
-  shortName: portfolioData.personal.firstName,
-  title: `${portfolioData.personal.fullName} | ${portfolioData.personal.jobTitle}`,
-  description: portfolioData.summary,
-  jobTitle: portfolioData.personal.jobTitle,
-  employer: {
-    name: portfolioData.experience[0].company,
-    role: portfolioData.experience[0].role,
-  },
-  email: portfolioData.personal.email,
-  phone: portfolioData.personal.phoneHref.replace("tel:", ""),
-  location: portfolioData.personal.location,
-  locale: "en_LK",
-  language: "en",
-  ogImage: portfolioData.personal.profileImage,
-  ogImageAlt: `${portfolioData.personal.fullName} — ${portfolioData.personal.jobTitle}`,
-  keywords: [
-    portfolioData.personal.fullName,
-    "Ravindu Ponnamperuma",
-    "Software Developer Sri Lanka",
-    "IT Coordinator",
-    "Full-Stack Developer",
-    "Angular Developer",
-    "NestJS Developer",
-    "TypeScript",
-    "University of Moratuwa BIT",
-    "SLITA",
-    "Elpitiya",
-    "Portfolio",
-  ],
-  social: {
-    linkedin: portfolioData.personal.social.linkedin.url,
-    github: portfolioData.personal.social.github.url,
-  },
-  knowsAbout: getAllSkills(),
+    name: portfolioData.personal.fullName,
+    shortName: portfolioData.personal.firstName,
+    title: `${portfolioData.personal.fullName} | ${portfolioData.personal.jobTitle}`,
+    description: portfolioData.summary,
+    jobTitle: portfolioData.personal.jobTitle,
+    employer: {
+        name: portfolioData.experience[0].company,
+        role: portfolioData.experience[0].role,
+    },
+    email: portfolioData.personal.email,
+    phone: portfolioData.personal.phoneHref.replace("tel:", ""),
+    location: portfolioData.personal.location,
+    locale: "en_LK",
+    language: "en",
+    ogImage: portfolioData.personal.profileImage,
+    ogImageAlt: `${portfolioData.personal.fullName} — ${portfolioData.personal.jobTitle}`,
+    keywords: [
+        portfolioData.personal.fullName,
+        "Ravindu Ponnamperuma",
+        "IT Support Engineer Sri Lanka",
+        "IT Support Technician",
+        "IT Coordinator",
+        "System Administrator",
+        "Helpdesk Support",
+        "Microsoft 365 Admin",
+        "ERP Administration",
+        "Moodle LMS Admin",
+        "Network Support",
+        "Full-Stack Developer",
+        "Angular Developer",
+        "University of Moratuwa BIT",
+        "SLITA",
+        "Elpitiya",
+        "Portfolio",
+    ],
+    social: {
+        linkedin: portfolioData.personal.social.linkedin.url,
+        github: portfolioData.personal.social.github.url,
+    },
+    knowsAbout: getAllSkills(),
 };
 
 export function getSiteUrl(): string {
-  const url =
-    process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
-  return url.replace(/\/$/, "");
+    const url =
+        process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
+    return url.replace(/\/$/, "");
 }
