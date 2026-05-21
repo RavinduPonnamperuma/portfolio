@@ -41,7 +41,7 @@ export function buildMetadata(): Metadata {
       images: [
         {
           url: ogImageUrl,
-          width: 1200,
+          width: 900,
           height: 1200,
           alt: siteConfig.ogImageAlt,
         },
@@ -55,7 +55,7 @@ export function buildMetadata(): Metadata {
     },
     icons: {
       icon: "/favicon.ico",
-      apple: "/images/profile.JPG.jpeg",
+      apple: "/images/profile.png",
     },
     other: {
       "geo.region": siteConfig.location.countryCode,
