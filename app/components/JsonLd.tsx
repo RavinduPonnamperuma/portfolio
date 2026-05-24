@@ -1,6 +1,8 @@
-import { getSiteUrl, siteConfig } from "@/lib/portfolio-data";
+import { buildSiteConfig, getSiteUrl } from "@/lib/portfolio-data";
+import { getPortfolioData } from "@/lib/portfolio-store";
 
 export default function JsonLd() {
+  const siteConfig = buildSiteConfig(getPortfolioData());
   const siteUrl = getSiteUrl();
   const personId = `${siteUrl}/#person`;
   const websiteId = `${siteUrl}/#website`;
