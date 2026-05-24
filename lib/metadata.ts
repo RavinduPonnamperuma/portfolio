@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { getSiteUrl, siteConfig } from "./portfolio-data";
+import { buildSiteConfig, getSiteUrl } from "./portfolio-data";
+import { getPortfolioData } from "./portfolio-store";
 
 export function buildMetadata(): Metadata {
+  const siteConfig = buildSiteConfig(getPortfolioData());
   const siteUrl = getSiteUrl();
   const ogImageUrl = `${siteUrl}${siteConfig.ogImage}`;
 

@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { Fragment, useRef } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { portfolioData } from "@/lib/portfolio-data";
+import { usePortfolio } from "@/app/context/PortfolioContext";
 
 function LinkedinIcon({
   size = 18,
@@ -59,7 +59,7 @@ function GithubIcon({
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const { personal } = portfolioData;
+  const { personal } = usePortfolio().data;
 
   const contactItems = [
     {

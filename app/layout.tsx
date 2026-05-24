@@ -11,6 +11,8 @@ const inter = Inter({
   display: "swap",
 });
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = buildMetadata();
 
 export const viewport: Viewport = {
@@ -29,6 +31,7 @@ export default function RootLayout({
     <html
       lang={siteConfig.language}
       className={`${inter.variable} antialiased`}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <body className="min-h-screen flex flex-col" suppressHydrationWarning>

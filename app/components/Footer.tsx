@@ -1,8 +1,9 @@
 "use client";
 
-import { portfolioData } from "@/lib/portfolio-data";
+import { usePortfolio } from "@/app/context/PortfolioContext";
 
 export default function Footer() {
+  const { data: portfolioData } = usePortfolio();
   const year = new Date().getFullYear();
 
   return (

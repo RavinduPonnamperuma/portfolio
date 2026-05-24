@@ -3,9 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { MapPin, FolderOpen } from "lucide-react";
-import { portfolioData } from "@/lib/portfolio-data";
-
-const { personal, summary, stats } = portfolioData;
+import { usePortfolio } from "@/app/context/PortfolioContext";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -18,6 +16,9 @@ const fadeRight = {
 };
 
 export default function Hero() {
+  const { data: portfolioData } = usePortfolio();
+  const { personal, summary, stats } = portfolioData;
+
   return (
     <section
       id="about"

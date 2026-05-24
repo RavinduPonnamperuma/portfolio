@@ -3,11 +3,13 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { GraduationCap, Award } from "lucide-react";
-import { portfolioData } from "@/lib/portfolio-data";
+import { usePortfolio } from "@/app/context/PortfolioContext";
+import type {
+  PortfolioCertificate,
+  PortfolioEducation,
+} from "@/lib/portfolio-types";
 
-type LearningItem =
-  | (typeof portfolioData.education)[number]
-  | (typeof portfolioData.certificates)[number];
+type LearningItem = PortfolioEducation | PortfolioCertificate;
 
 const containerVariants = {
   hidden: {},
@@ -105,7 +107,7 @@ function LearningBlock({
 }
 
 export default function Education() {
-  const { education, certificates } = portfolioData;
+  const { education, certificates } = usePortfolio().data;
 
   return (
     <div className="py-16 sm:py-20 lg:py-24">
