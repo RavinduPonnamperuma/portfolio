@@ -1,4 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) portfolio site. Content is stored in `data/portfolio.json` and can be edited through a built-in admin panel.
+
+## Admin panel
+
+1. On the home page, **click the logo initials (RP) five times** within about 1.2 seconds.
+2. Sign in with the admin password (default: **`200010`**).
+3. You are taken to `/admin`, where you can edit profile, about text, experience, or the full JSON (skills, projects, education, certificates).
+4. Click **Save changes**, then reload the home page to see updates.
+
+### Environment variables
+
+Copy `.env.example` to `.env.local` and adjust:
+
+| Variable | Purpose |
+|----------|---------|
+| `ADMIN_PASSWORD` | Admin sign-in password (default `200010`) |
+| `ADMIN_SESSION_SECRET` | Signs the admin session cookie — use a long random string in production |
+| `NEXT_PUBLIC_SITE_URL` | Public URL for SEO and Open Graph |
+
+**Security:** Change the default password before deploying. The five-click logo is a convenience gate, not strong security.
+
+**Hosting note:** Saving updates writes to `data/portfolio.json` on disk. This works on local dev and VPS/Node hosting. Serverless platforms (e.g. Vercel) usually have a read-only filesystem — use a VPS, commit JSON changes from your machine, or add external storage later.
 
 ## Getting Started
 

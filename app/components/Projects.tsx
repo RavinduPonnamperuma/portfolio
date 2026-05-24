@@ -12,12 +12,10 @@ import {
   FolderGit2,
   type LucideIcon,
 } from "lucide-react";
-import { portfolioData } from "@/lib/portfolio-data";
+import { usePortfolio } from "@/app/context/PortfolioContext";
+import type { ProjectIcon } from "@/lib/portfolio-types";
 
-const iconMap: Record<
-  (typeof portfolioData.projects)[number]["icon"],
-  LucideIcon
-> = {
+const iconMap: Record<ProjectIcon, LucideIcon> = {
   monitor: Monitor,
   server: Server,
   database: Database,
@@ -41,7 +39,7 @@ export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const { projects, githubRepositoriesUrl, featuredProjectCount } =
-    portfolioData;
+    usePortfolio().data;
   const featuredProjects = projects.slice(0, featuredProjectCount);
   const remainingCount = projects.length - featuredProjects.length;
 

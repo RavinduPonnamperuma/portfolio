@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { portfolioData } from "@/lib/portfolio-data";
+import { usePortfolio } from "@/app/context/PortfolioContext";
+import AdminLoginModal from "./AdminLoginModal";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -15,9 +17,20 @@ const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
+const LOGO_CLICK_WINDOW_MS = 1200;
+const LOGO_CLICKS_REQUIRED = 5;
+
 export default function Navbar() {
+  const router = useRouter();
+  const { data: portfolioData } = usePortfolio();
+  const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const adminFromUrl = searchParams.get("admin") === "login";
+  const [adminManualOpen, setAdminManualOpen] = useState(false);
+  const adminLoginOpen = adminFromUrl || adminManualOpen;
+  const logoClickCount = useRef(0);
+  const logoClickTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -26,6 +39,25 @@ export default function Navbar() {
   }, []);
 
   const handleLinkClick = () => setIsOpen(false);
+
+  const handleLogoClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (logoClickTimer.current) {
+      clearTimeout(logoClickTimer.current);
+    }
+
+    logoClickCount.current += 1;
+
+    if (logoClickCount.current >= LOGO_CLICKS_REQUIRED) {
+      logoClickCount.current = 0;
+      event.preventDefault();
+      setAdminManualOpen(true);
+      return;
+    }
+
+    logoClickTimer.current = setTimeout(() => {
+      logoClickCount.current = 0;
+    }, LOGO_CLICK_WINDOW_MS);
+  };
 
   return (
     <nav
@@ -42,8 +74,9 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#about"
+            onClick={handleLogoClick}
             aria-label={`${portfolioData.personal.fullName} — back to top`}
-            className="text-2xl font-bold text-gold tracking-wider hover:opacity-80 transition-opacity"
+            className="text-2xl font-bold text-gold tracking-wider hover:opacity-80 transition-opacity select-none"
           >
             {portfolioData.personal.logoInitials}
           </a>
@@ -101,6 +134,16 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <AdminLoginModal
+        open={adminLoginOpen}
+        onClose={() => {
+          setAdminManualOpen(false);
+          if (adminFromUrl) {
+            router.replace("/");
+          }
+        }}
+      />
     </nav>
   );
 }
