@@ -5,7 +5,7 @@ const SESSION_MAX_AGE_SEC = 60 * 60 * 24 * 7; // 7 days
 function getSessionSecret(): string {
   return (
     process.env.ADMIN_SESSION_SECRET?.trim() ||
-    "portfolio-dev-secret-change-in-production"
+    "4eb749c6bb1f779f55bf96412be08a8ac1696a26898dbc110ad19d58bc257f74"
   );
 }
 
