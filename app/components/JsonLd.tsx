@@ -2,11 +2,13 @@ import { buildSiteConfig, getSiteUrl } from "@/lib/portfolio-data";
 import { getPortfolioData } from "@/lib/portfolio-store";
 
 export default function JsonLd() {
-  const siteConfig = buildSiteConfig(getPortfolioData());
+  const portfolioData = getPortfolioData();
+  const siteConfig = buildSiteConfig(portfolioData);
   const siteUrl = getSiteUrl();
   const personId = `${siteUrl}/#person`;
   const websiteId = `${siteUrl}/#website`;
   const webpageId = `${siteUrl}/#webpage`;
+  const degree = portfolioData.education.find((item) => item.type === "degree");
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -42,6 +44,24 @@ export default function JsonLd() {
         jobTitle: siteConfig.jobTitle,
         description: siteConfig.description,
         knowsAbout: siteConfig.knowsAbout,
+        ...(degree
+          ? {
+              alumniOf: {
+                "@type": "CollegeOrUniversity",
+                name: degree.institution,
+              },
+              hasCredential: {
+                "@type": "EducationalOccupationalCredential",
+                credentialCategory: "degree",
+                name: degree.title,
+                description: degree.description,
+                recognizedBy: {
+                  "@type": "CollegeOrUniversity",
+                  name: degree.institution,
+                },
+              },
+            }
+          : {}),
         address: {
           "@type": "PostalAddress",
           addressLocality: siteConfig.location.locality,

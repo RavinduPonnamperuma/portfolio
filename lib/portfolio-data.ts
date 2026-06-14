@@ -39,10 +39,13 @@ export function buildSiteConfig(data: PortfolioData) {
       "Full-Stack Developer",
       "Angular Developer",
       "University of Moratuwa BIT",
+      "University of Moratuwa Graduate",
+      "BIT Graduate",
       "SLITA",
       "Elpitiya",
       "Portfolio",
     ],
+      
     social: {
       linkedin: data.personal.social.linkedin.url,
       github: data.personal.social.github.url,
