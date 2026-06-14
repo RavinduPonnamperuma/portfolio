@@ -354,7 +354,7 @@ export const defaultPortfolioData = {
             title: "Bachelor of Information Technology (BIT)",
             institution: "University of Moratuwa",
             year: "2022 – 2025",
-            description: "Successfully completed, currently awaiting graduation",
+            description: "Graduated with Bachelor of Information Technology (BIT)",
         },
     ],
 
