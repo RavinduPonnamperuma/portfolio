@@ -4,7 +4,7 @@ Personal portfolio website for **Ravindu Ponnamperuma**, an IT Support Engineer 
 
 ## About
 
-I am a BIT graduate from the University of Moratuwa with hands-on experience in IT support, system administration, and enterprise infrastructure. I currently work as **IT Coordinator** at the Sri Lanka Institute of Textile & Apparel (SLITA), where I manage web platforms, ERP/LMS systems, Microsoft 365, and end-user support. My background also includes IT support and digital media at Pulse Academy and a Trainee Software Developer role at Maxim Impressions Lanka.
+I am a **BIT graduate** from the University of Moratuwa with hands-on experience in IT support, system administration, and enterprise infrastructure. I currently work as **IT Coordinator** at the Sri Lanka Institute of Textile & Apparel (SLITA), where I manage web platforms, ERP/LMS systems, Microsoft 365, and end-user support. My background also includes IT support and digital media at Pulse Academy and a Trainee Software Developer role at Maxim Impressions Lanka.
 
 This repository is the source for my public portfolio: a fast, accessible site that highlights what I do, the systems I support, and the technologies I work with.
 
